@@ -1,7 +1,6 @@
-# server.py
+﻿# server.py
 # coding: utf-8
 from __future__ import unicode_literals
-from middleware import TestMiddle
 import socket
 import StringIO
 import sys
