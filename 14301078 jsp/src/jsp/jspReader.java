@@ -48,10 +48,6 @@ public class jspReader {
 					line = line.replace("%>", ");&&");
 					line = line.replace("\"", "&&&&");
 				}
-				if(line.contains("<%@"))
-				{
-					line =  "response.setContentType(\"text/html; charset=gb2312\");";
-				}
 
 				jspContent = jspContent + " " + line;
 			}
@@ -93,12 +89,11 @@ public class jspReader {
 			br4.close();
 			//
 			// Ìæ»»
-			String ServeletContent1 = jspContent.replace(sign[5], sign[6]);
-		    ServeletContent1 = ServeletContent1.replace("$$out.println(", sign[2]);
+		//	String ServeletContent1 = jspContent.replace(sign[5], sign[6]);
+			String ServeletContent1 = jspContent.replace("$$out.println(", sign[2]);
 		    ServeletContent1 = ServeletContent1.replace(");&&",");" + sign[1] );
 			ServeletContent1 = ServeletContent1.replace("<%", sign[0]);
 			ServeletContent1 = ServeletContent1.replace("%>", sign[1]);	
-			//ServeletContent1 = ServeletContent1.replace(sign[3], sign[4]);
 			ServeletContent1 = ServeletContent1.replace("&&&&", sign[5]);
 			
 			
