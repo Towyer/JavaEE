@@ -9,6 +9,6 @@ public class test {
         ApplicationContext ctx = 
 		    new LoadAllBeanApplicationContext(locations);
         boss boss = (boss) ctx.getBean("boss");
-        System.out.println(boss.tostring());;
+        System.out.println(boss.tostring());
     }
 }
